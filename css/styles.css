@@ -19,6 +19,9 @@ body{
 }
 
 /* Хедер */
+.header{
+    border-bottom: 1px solid #ECECEC;
+}
 .container{
     outline: 2px solid red;
 
@@ -47,15 +50,27 @@ body{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    display: flex;
 }
-.nav-link{
-    color: var(--main-text-color);
+.nav .list{
+    display: flex;
+}
+.nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+.nav .link{
+    color: currentColor;
     text-decoration: none;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-.nav-link:hover, .nav-link:focus{
+.nav .link:hover, .nav .link:focus{
     color: var(--link-color);
 }
-.nav-link.current{
+.nav .link.current{
     color: var(--link-color);
 }
 
@@ -208,16 +223,14 @@ body{
     line-height: 1.71;
     letter-spacing: 0.03em;  
 }
-.contacts-link:hover, .contacts-link:focus {
-    color: var(--link-color);
-}
 .contacts-link.map{
     color: var(--main-white-color);
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-.map:hover, .map:focus{
+.contacts-link:hover,
+.contacts-link:focus {
     color: var(--link-color);
 }
 .contacts-link.mail{
