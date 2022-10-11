@@ -20,31 +20,31 @@
   <body>
     <!-- Хедер -->
     <header class="header">
-      <div class="container">
+      <div class="container main-nav">
         <nav class="nav">
           <!-- Логоптип -->
           <a class="logo" href="/"><span>Web</span>Studio</a>
-
+    
           <!-- Навігація сайту -->
           <ul class="list">
             <li class="item">
-              <a class="link current" href="./index.html">Студія</a>
+              <a class="nav-link current" href="./index.html">Студія</a>
             </li>
             <li class="item">
-              <a class="link" href="./portfolio.html">Портфоліо</a>
+              <a class="nav-link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="item">
-              <a class="link" href="">Контакти</a>
+              <a class="nav-link" href="">Контакти</a>
             </li>
           </ul>
         </nav>
-
+    
         <!-- Контакти хедер -->
-        <ul class="list contacts-header">
-          <li>
+        <ul class="list contacts">
+          <li class="item">
             <a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li>
+          <li class="item">
             <a class="contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
@@ -57,7 +57,7 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button">Замовити послугу</button>
         </div>
       </section>
 
@@ -65,27 +65,31 @@
       <section class="section">
         <div class="container">
           <!-- Заголовок, сховати при оформленні -->
-          <h2 class="secondary-title">Наші переваги</h2>
+          <h2 class="visually-hidden">Наші переваги</h2>
+          
           <ul class="list benefits">
-            <li>
+            <li class="item">
               <h3 class="benefits-title">Увага до деталей</h3>
               <p class="benefits-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            
+            <li class="item">
               <h3 class="benefits-title">Пунктуальність</h3>
               <p class="benefits-text">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            
+            <li class="item">
               <h3 class="benefits-title">Планування</h3>
               <p class="benefits-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            
+            <li class="item">
               <h3 class="benefits-title">Сучасні технології</h3>
               <p class="benefits-text">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -96,25 +100,27 @@
       </section>
 
       <!-- Чим ми займаємося -->
-      <section class="section works">
+      <section class="section main-work">
         <div class="container">
           <h2 class="secondary-title">Чим ми займаємося</h2>
           <ul class="list works">
-            <li>
+            <li class="item-works">
               <img
                 src="./images/work-example-1.jpg"
                 alt="Програміст працює на своєму робочому місці в офісі"
                 width="370"
               />
             </li>
-            <li>
+           
+            <li class="item-works">
               <img
                 src="./images/work-example-2.jpg"
                 alt="Веб-дизайнер розробляє інтерфейс мобільного додатку за своїм ноутбуком"
                 width="370"
               />
             </li>
-            <li class="item work">
+            
+            <li class="item-works">
               <img
                 src="./images/work-example-3.jpg"
                 alt="Веб-дизайнер обирає кольори на графічному планшеті"
@@ -126,11 +132,11 @@
       </section>
 
       <!-- Команда -->
-      <section class="section team">
+      <section class="section main-team">
         <div class="container">
           <h2 class="secondary-title">Наша команда</h2>
-          <ul class="list members">
-            <li class="item member">
+          <ul class="list team">
+            <li class="item-team">
               <img
                 class="member-foto"
                 src="./images/team-demjanenko.jpg"
@@ -140,7 +146,8 @@
               <h3 class="member-name">Ігор Дем'яненко</h3>
               <p class="member-profession">Product Designer</p>
             </li>
-            <li class="item member">
+           
+            <li class="item-team">
               <img
                 class="member-foto"
                 src="./images/team-repina.jpg"
@@ -150,7 +157,8 @@
               <h3 class="member-name">Ольга Рєпіна</h3>
               <p class="member-profession">Frontend Developer</p>
             </li>
-            <li class="item member">
+            
+            <li class="item-team">
               <img
                 class="member-foto"
                 src="./images/team-tarasov.jpg"
@@ -160,7 +168,8 @@
               <h3 class="member-name">Микола Тарасов</h3>
               <p class="member-profession">Marketing</p>
             </li>
-            <li class="item member">
+           
+            <li class="item-team">
               <img
                 class="member-foto"
                 src="./images/team-ermakov.jpg"
