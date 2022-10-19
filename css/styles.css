@@ -18,7 +18,7 @@ body {
 
 h1,
 h2,
-h3,
+h3,h4,h5,h6
 p {
   margin: 0;
 }
@@ -26,18 +26,18 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
-
-.list {
-  list-style-type: none;
-
-  margin: 0;
-  padding: 0;
+.button{
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
+.section {
+  /* outline: 2px solid yellow; */
 
-/* Хедер */
-.header {
-  border-bottom: 1px solid #ececec;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .container {
   /* outline: 2px solid red; */
@@ -47,6 +47,17 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+.list {
+  list-style: none;
+
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Хедер */
+.header {
+  border-bottom: 1px solid #ececec;
 }
 .main-nav {
   display: flex;
@@ -102,9 +113,7 @@ img {
 
 /* Контакти хедер */
 .header .contacts {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+ 
 
   display: flex;
   margin-left: auto;
@@ -113,21 +122,19 @@ img {
   margin-right: 50px;
 }
 .contacts-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--secondary-text-color);
 }
 
 /* Головний контент */
 /* Герой */
-.section {
-  /* outline: 2px solid yellow; */
-
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.section.hero {
+.hero {
     background-color: #2F303A;
   text-align: center;
+  padding: 200px 0;
 }
 .hero-title {
   color: var(--main-white-color);
@@ -138,25 +145,22 @@ img {
   text-transform: uppercase;
 
   width: 696px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
-.hero-button {
+.hero-btn {
   color: var(--main-white-color);
   background-color: var(--link-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 4px;
 
   padding: 10px 32px;
 }
-.hero-button:hover,
-.hero-button:focus {
+.hero-btn:hover,
+.hero-btn:focus {
   background-color: var(--button-hover);
 }
 
@@ -177,13 +181,12 @@ img {
 }
 .benefits {
   display: flex;
-  /* justify-content: space-between; */
-  margin-right: calc(-1 * var(--card-gap));
 }
 .benefits > .item {
-  /* flex-basis: 270px; */
-  flex-basis: calc(100% / 4 - var(--card-gap));
-  margin-right: var(--card-gap);
+  flex-basis: calc(100% / 4);
+}
+.benefits > .item:not(:last-child) {
+  margin-right:var(--card-gap);
 }
 .benefits-title {
   font-size: 14px;
@@ -211,11 +214,11 @@ img {
 }
 .works {
   display: flex;
-  margin-right: calc(-1 * var(--card-gap));
-  /* justify-content: space-between; */
 }
 .item-works {
-  flex-basis: calc(100% / 3 - var(--card-gap));
+  flex-basis: calc(100% / 3);
+}
+.item-works:not(:last-child) {
   margin-right: var(--card-gap);
 }
 
@@ -226,7 +229,9 @@ img {
 }
 .team {
   display: flex;
-  margin-right: calc(-1 * var(--card-gap));
+}
+.team:not(:last-child) {
+  margin-right: var(--card-gap);
 }
 .item-team {
   background: var(--main-white-color);
@@ -234,12 +239,11 @@ img {
     0px 2px 1px rgb(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  flex-basis: calc(100% / 4 - var(--card-gap));
-  margin-right: var(--card-gap);
-  padding-bottom: var(--card-gap);
+  flex-basis: calc(100% /4);
 }
-.member-foto {
-  margin-bottom: var(--card-gap);
+.member-text {
+  padding-top: var(--card-gap);
+  padding-bottom: var(--card-gap);
 }
 .member-name {
   font-weight: 500;
@@ -276,6 +280,9 @@ img {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.71;
 }
+.item-contacts:not(:last-child) {
+  margin-bottom: 9px;
+}
 .contacts-link.map {
   color: var(--main-white-color);
   line-height: 1.71;
@@ -283,11 +290,6 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--link-color);
-}
-.contacts-link.mail {
-  display: inline-block;
-  margin-top: 9px;
-  margin-bottom: 9px;
 }
 
 /* Портфоліо */
@@ -300,20 +302,17 @@ img {
 .item-filters:not(:last-child) {
   margin-right: 8px;
 }
-.filters-button {
+.filters-btn {
   color: var(--main-text-color);
   background-color: var(--background-gray);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 
   padding: 6px 22px;
 }
-.filters-button:hover, .filters-button:focus{
+.filters-btn:hover, .filters-btn:focus{
   color: var(--main-white-color);
   background-color: var(--link-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
